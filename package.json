@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/utils.test.js"
+    "test": "mocha **/utils.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.0.0"
+  },
+  "dependencies": {
+    "expect": "^1.20.2"
   }
 }
