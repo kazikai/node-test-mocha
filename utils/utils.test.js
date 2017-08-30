@@ -42,5 +42,18 @@ it('should verify first and last name are set', () => {
     lastName: 'Junghyun'
   });
 });
+// done이 필요
+it('should async add two numbers', (done) => {
+  utils.asyncAdd(4, 3, (sum) => {
+    expect(sum).toBe(7).toBeA('number');
+    done(); // done을 가지고 비동기의 Resolve를 해줘야함
+  });
+});
 
+it('should async square two numbers', (done) => {
+  utils.asyncSquare(4, (res) => {
+    expect(res).toBe(16).toBeA('number');
+    done(); // done을 가지고 비동기의 Resolve를 해줘야함
+  });
+});
 
